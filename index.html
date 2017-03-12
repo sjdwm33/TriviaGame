@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Trivia Game</title>
+	<title>Teen Pop Trivia Game</title>
 
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<!-- Latest compiled and minified CSS -->
@@ -12,8 +12,143 @@
 	<link rel="stylesheet" href="assets/css/style.css" type="text/css">
 	<meta name="viewpoint" content="width=device-width, intial-scale=1">
 	<script src="https://code.jquery.com/jquery.js"></script>
+	<script>
+
+	document.cookie="ready=yes";
+	</script>
 </head>
 <body>
+	<div class="container">
+		<div class="row">
+			<h1 class="jumbotron">Teen Pop Trivia Challenge!</h1>
+			<button id="start-game" style="display: block;"> Start </button>
+		</div>
+		<div class="row trivia-body">
+			<p>Time remaining:<div id="display">30</div>seconds</p>	
+		</div>
+		<div class="row" id="game-text" style="display: none;">
+			<form name ="triviaQuiz" id = "trivia-questions">
+				<div class="question">
+				1). Which vlogger opened for Taylor Swift on her 1989 tour?</div>
+				<div class="q-options">
+				<input type="radio" value="a" name="question1">a) Alessia Cara<br>
+				<input type="radio" value="b" name="question1">b) Shawn Mendez<br>
+				<input type="radio" value="c" name="question1">c) Troye Sivan<br>
+				<input type="radio" value="d" name="question1">d) Pentatonix<br>
+				</div>
+			<br>
+				<div class="question">
+				2). Which late night host became friends with One Direction after working on a TV show with Louis Tomlinson's mom?</div>
+				<div class="q-options">
+				<input type="radio" value="a" name="question2">a) James Corden<br>
+				<input type="radio" value="b" name="question2">b) Jimmy Fallon<br>
+				<input type="radio" value="c" name="question2">c) Trevor Noah<br>
+				<input type="radio" value="d" name="question2">d) Seth Meyers<br>
+				</div>
+			<br>
+				<div class="question">
+				3). Which group was the first band to ever win X Factor?</div>
+				<div class="q-options">
+				<input type="radio" value="a" name="question3">a) Fifth Harmony<br>
+				<input type="radio" value="b" name="question3">b) One Direction<br>
+				<input type="radio" value="c" name="question3">c) The Wanted<br>
+				<input type="radio" value="d" name="question3">d) Little Mix<br>
+				</div>
+			<br>
+				<div class="question">
+				4). Who cowrote Justin Bieber's hit song "Love Yourself"?</div>
+				<div class="q-options">
+				<input type="radio" value="a" name="question4">a) Taylor Swift<br>
+				<input type="radio" value="b" name="question4">b) Ed Sheeran<br>
+				<input type="radio" value="c" name="question4">c) Zayn<br>
+				<input type="radio" value="d" name="question4">d) Selena Gomez<br>
+				</div>
+			<br>
+				<div class="question">
+				5). Which artist got her start on tumblr?</div>
+				<div class="q-options">
+				<input type="radio" value="a" name="question5">a) Kelsea Ballerini<br>
+				<input type="radio" value="b" name="question5">b) Tori Kelly<br>
+				<input type="radio" value="c" name="question5">c) Tinashe<br>
+				<input type="radio" value="d" name="question5">d) Halsey<br>
+				</div>
+			<br>
+				<div class="question">
+				6). Which band got into a twitter fight with One Direction in 2013?</div>
+				<div class="q-options">
+				<input type="radio" value="a" name="question6">a) The Wanted<br>
+				<input type="radio" value="b" name="question6">b) Backstreet Boys<br>
+				<input type="radio" value="c" name="question6">c) Fall Out Boy<br>
+				<input type="radio" value="d" name="question6">d) 5 Seconds of Summer<br>
+				</div>
+			<br>
+				<div class="question">
+				7). Members of the band Good Charlotte wrote a song for which group?</div>
+				<div class="q-options">
+				<input type="radio" value="a" name="question7">a) Little Mix<br>
+				<input type="radio" value="b" name="question7">b) Twenty One Pilots<br>
+				<input type="radio" value="c" name="question7">c) The 1975<br>
+				<input type="radio" value="d" name="question7">d) 5 Seconds of Summer<br>
+				</div>
+			<br>
+				<div class="question">
+				8). Halsey briefly dated the lead singer of which band?</div>
+				<div class="q-options">
+				<input type="radio" value="a" name="question8">a) The 1975<br>
+				<input type="radio" value="b" name="question8">b) 5 Seconds of Summer<br>
+				<input type="radio" value="c" name="question8">c) The Wanted<br>
+				<input type="radio" value="d" name="question8">d)One Direction<br>
+				</div>
+			<br>
+				<div class="question">
+				9). Taylor Swift wrote every song of which album completely on her own?</div>
+				<div class="q-options">
+				<input type="radio" value="a" name="question9">a) Red<br>
+				<input type="radio" value="b" name="question9">b) Fearless<br>
+				<input type="radio" value="c" name="question9">c) Speak Now<br>
+				<input type="radio" value="d" name="question9">d) 1989<br>
+				</div>
+			<br>
+				<div class="question">
+				10). Which two members of Little Mix have never been engaged?</div>
+				<div class="q-options">
+				<input type="radio" value="a" name="question10">a) Jesy and Leighanne<br>
+				<input type="radio" value="b" name="question10">b) Leighanne and Perrie<br>
+				<input type="radio" value="c" name="question10">c) Jade and Perrie<br>
+				<input type="radio" value="d" name="question10">d) Leighanne and Jade<br>
+				</div>
+			<br>
+				<div class="question">
+				11). What member of Fifth Harmony unexpectedly left the band at the end of 2016?</div>
+				<div class="q-options">
+				<input type="radio" value="a" name="question11">a) Camila Cebello<br>
+				<input type="radio" value="b" name="question11">b) Dinah Jane<br>
+				<input type="radio" value="c" name="question11">c) Normani Kordei<br>
+				<input type="radio" value="d" name="question11">d) Ally Brooke<br>
+				</div>
+			<br>
+				<div class="question">
+				12). Which of these acts is NOT from the Oceania region?</div>
+				<div class="q-options">
+				<input type="radio" value="a" name="question12">a) Lorde<br>
+				<input type="radio" value="b" name="question12">b) 5 Seconds of Summer<br>
+				<input type="radio" value="c" name="question12">c) Little Mix<br>
+				<input type="radio" value="d" name="question12">d) Troye Sivan<br>
+				</div>
+			<br>
+			</form>
+			<button id = "submit-answers">Submit</button>
+		</div>
+		<div class="row" id="results" style="display: none;">
+			<h1> Game Over! </h1>
+			<h3 id = "correct-answers"> Correct: </h3>
+			<h3 id = "wrong-answers"> Incorrect: </h3>
+			<h3 id = "blank-answers"> Unanswered: </h3>
+			<button id = "restart-game">Restart</button>
+		</div>
 
+	
+	</div>
+	<script src="./assets/javascript/game.js"></script>
 </body>
 </html>
