@@ -116,9 +116,12 @@ function showResults(){
 		document.getElementById("start-game").style.display = "block";
 		document.getElementById("game-text").style.display = "none";
 		document.getElementById("results").style.display = "none";
-		var wrong = 0;
-		var rightAnswers = 0;
-		var blanks = 0;
+		wrong = 0;
+		rightAnswers = 0;
+		blanks = 0;
+		$("#correct-answers").text("Correct: ");
+		$("#wrong-answers").text("Incorrect: ");
+		$("#blank-answers").text("Unanswered: ");
 	}
 	$("#restart-game").on("click", function(){
 		resetGame();
